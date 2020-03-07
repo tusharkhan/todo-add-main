@@ -1,5 +1,4 @@
 const request = require('request');
-const axios = require('axios').default;
 const functions = {};
 
 functions.register = (data, callback) => {

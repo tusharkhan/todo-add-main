@@ -15,6 +15,7 @@
     "express-session": "^1.17.0",
     "hbs": "^4.1.0",
     "macaddress": "^0.2.9",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "string-to-json": "^0.1.0"
   }
 }

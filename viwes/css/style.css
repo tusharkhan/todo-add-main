@@ -395,8 +395,9 @@ input[type="checkbox"] {
     height: 1.25rem;
     line-height: 20px;
     text-align: center;
-    position: relative;
-    right: 7px;
+    /* position: relative;
+    right: 7px; */
+    float: right;
 }
 
 .ml-auto,
@@ -463,5 +464,9 @@ input[type="checkbox"] {
     line-height: 20px;
     text-align: center;
     position: relative;
-    top: 8px;
+    top: 5px;
+}
+
+.todo-button{
+    width: 100%;
 }
