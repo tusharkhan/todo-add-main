@@ -27,12 +27,13 @@
                             
                             <div class="list-wrapper">
                                 <ul class="d-flex flex-column-reverse todo-list">
-                                            {{#if fileresults.completed }}
+                                    {{#if fileresults}}
+                                        {{#if fileresults.completed }}
                                                 <li class="completed">
                                                     {{else}}
                                                 <li>
                                                     {{/if}}
-                                                    <div class="form-check"> 
+                                                    <div class="form-check" style="width: 80%;"> 
                                                         <label class="form-check-label"> 
                                                             {{!-- <form action=""> --}}
                                                                 <input class="checkbox" type="checkbox"  name="completed" {{#if fileresults.completed  }} checked="" {{/if}}   >
@@ -43,7 +44,7 @@
                                                     </div> 
                                                     <a class="todo-button" href="#" ><i class="remove mdi mdi-close-circle-outline"></i></a>
                                                 </li>
-                                    
+                                    {{/if}}    
                                     {{#each results}}
                                             {{#each this}}
                                                 {{#if this.completed }}

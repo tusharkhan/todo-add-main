@@ -31,12 +31,13 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
     if(! __session){
         ifnotlogin.read((data) => {
-            console.log ( JSON.parse(data));
-            res.render(public_path + '/index', {fileresults: JSON.parse(data)});
+            console.log(data == undefined)
+            if(data === undefined) res.render(public_path + '/index');
+            else res.render(public_path + '/index', {fileresults: JSON.parse(data)});
         });
     } else {
+        ifnotlogin.storeValues();
         todo.getTodos((err, result) => {
-            console.log(typeof result.todos)
             res.render(public_path + '/index', {results: result.todos});
         });
     }
